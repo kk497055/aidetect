@@ -244,7 +244,7 @@
             Tired of guessing? Our tool offers <strong>90%+ confidence</strong> in detecting AI-generated content. Be the first to know when we go live and gain exclusive early access to advanced features.
         </p>
 
-        <form class="waitlist-form" action="https://formspree.io/f/xldoqwgk" method="POST">
+        <form id="waitlist-form" class="waitlist-form" action="https://formspree.io/f/xldoqwgk" method="POST">
             <input type="email" name="email" placeholder="Enter your email to join the waitlist & get updates" required>
             <button type="submit">Get Early Access</button>
         </form>
@@ -289,17 +289,38 @@
     }
     </script>
 
+<!-- GA EVENT TRACKING SCRIPT -->
     <script>
-        // Track form submission to Google Analytics
-        document.querySelector('.waitlist-form').addEventListener('submit', function(e) {
-            // Send event to Google Analytics
-            gtag('event', 'form_submit', {
-                'event_category': 'Waitlist',
-                'event_label': 'Email Signup',
-                'value': 1
+    try {
+      // Find the form by its new ID
+      const waitlistForm = document.getElementById('waitlist-form');
+      
+      if (waitlistForm) {
+        waitlistForm.addEventListener('submit', function(e) {
+          // Check if gtag is available
+          if (typeof gtag === 'function') {
+            // Send a standard GA4 'generate_lead' event.
+            // This is better than 'form_submit' and aligns with events like 'qualify_lead'.
+            gtag('event', 'generate_lead', {
+              'event_category': 'Waitlist',
+              'event_label': 'Email Signup',
+              'value': 1 // You can assign a value to this lead if you want
             });
+            
+            // For debugging, you can log to the console
+            console.log('GA Event: generate_lead sent.');
+          } else {
+            console.log('gtag function not found. Event not sent.');
+          }
         });
+      } else {
+        console.error('Waitlist form with id "waitlist-form" not found.');
+      }
+    } catch (err) {
+      console.error('Error adding GA event listener:', err);
+    }
     </script>
+    <!-- END GA EVENT TRACKING SCRIPT -->
 
 </body>
 </html>
