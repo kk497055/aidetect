@@ -289,5 +289,17 @@
     }
     </script>
 
+    <script>
+        // Track form submission to Google Analytics
+        document.querySelector('.waitlist-form').addEventListener('submit', function(e) {
+            // Send event to Google Analytics
+            gtag('event', 'form_submit', {
+                'event_category': 'Waitlist',
+                'event_label': 'Email Signup',
+                'value': 1
+            });
+        });
+    </script>
+
 </body>
 </html>
