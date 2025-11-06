@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AIDetector.plus: Accurate AI & GPT Detector - Launching Soon</title>
+    <meta name="description" content="Get early access to the next-gen AI Detector for GPT-4, AI essays, and marketing content. Our advanced tool offers 99% accuracy. Join the waitlist!">
+    <link rel="canonical" href="https://aidetector.plus/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Orbitron:wght[email protected];700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+
+    <style>
+        /* Global Variables & Colors */
+        :root {
+            --dark-bg: #1a1a2e; /* Deep indigo */
+            --dark-bg-light: #2c3e50; /* Darker blue-grey */
+            --text-light: #e0e0e0; /* Light grey for main text */
+            --accent-blue: #00bcd4; /* Cyan/aqua blue */
+            --accent-purple: #9c27b0; /* Vibrant purple */
+            --accent-green: #4CAF50; /* Standard green */
+            --gradient-start: #00bcd4; /* Neon Blue */
+            --gradient-end: #ff007f; /* Neon Pink/Red */
+            --form-bg: #2d3b4b; /* Darker form background */
+            --border-color: #3e5a77; /* Subtle border for elements */
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--dark-bg), #0f0f1d); /* Subtle gradient for background */
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column; /* Changed to column for footer */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll from gradients/shadows */
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 50px; /* More padding for a premium feel */
+            background: linear-gradient(145deg, #1f2a3a, #151e2b); /* Inner dark gradient for container */
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); /* Deeper shadow for contrast */
+            border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle light border */
+            flex-grow: 1; /* Allow container to grow and push footer down */
+            display: flex; /* For inner content alignment */
+            flex-direction: column; /* For inner content alignment */
+            justify-content: center; /* For inner content alignment */
+            align-items: center; /* For inner content alignment */
+        }
+
+        /* Logo */
+        .logo {
+            font-family: 'Orbitron', sans-serif; /* Techy font for logo */
+            font-size: 42px; /* Larger logo */
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); /* Neon gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block; /* Essential for text gradient */
+            /* Removed filter: drop-shadow for logo */
+        }
+        .logo span { /* For the .plus part if desired */
+            background: linear-gradient(90deg, var(--accent-green), #66bb6a); /* Green gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Removed filter: drop-shadow for logo span */
+        }
+
+        /* Hero Section */
+        h1 {
+            font-family: 'Orbitron', sans-serif; /* Techy font for main headline */
+            font-size: 58px; /* Larger, bolder headline */
+            font-weight: 700;
+            margin: 30px 0 15px 0;
+            line-height: 1.1;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); /* Main neon gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Removed animation: pulse-glow and associated @keyframes */
+        }
+        
+        p.subtitle {
+            font-size: 22px; /* Slightly larger subtitle */
+            color: #b0c4de; /* Softer light text */
+            margin-bottom: 50px; /* More space */
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300; /* Lighter weight for balance */
+        }
+        p.subtitle strong {
+            color: var(--accent-blue); /* Highlight key points */
+            font-weight: 600;
+        }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            justify-content: center;
+            max-width: 550px; /* Slightly wider form */
+            margin: 0 auto 20px auto;
+            border-radius: 12px; /* More rounded corners */
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Deeper form shadow */
+            border: 1px solid var(--border-color); /* Subtle form border */
+        }
+        .waitlist-form input[type="email"] {
+            flex: 1;
+            padding: 20px 25px; /* More padding */
+            font-size: 19px; /* Larger font */
+            border: none; /* No input border as form has one */
+            background-color: var(--form-bg); /* Darker input background */
+            color: var(--text-light);
+            outline: none;
+        }
+        .waitlist-form input[type="email"]::placeholder {
+            color: #8899aa; /* Lighter placeholder */
+        }
+        .waitlist-form input[type="email"]:focus {
+            background-color: #3e4d5f; /* Slightly lighter on focus */
+            box-shadow: inset 0 0 5px rgba(0, 188, 212, 0.4); /* Inner glow */
+        }
+        .waitlist-form button {
+            padding: 20px 35px; /* More padding */
+            font-size: 19px;
+            font-weight: 600;
+            color: #fff;
+            background-color: var(--accent-green); /* Action green */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase; /* Call to action style */
+            letter-spacing: 0.5px;
+            /* Removed filter: drop-shadow for button */
+        }
+        .waitlist-form button:hover {
+            background-color: #43a047; /* Darker green on hover */
+            transform: translateY(-2px); /* Subtle lift effect */
+            /* Removed filter: drop-shadow for button hover */
+        }
+        p.form-privacy {
+            font-size: 15px; /* Slightly larger privacy text */
+            color: #a0a0a0;
+            margin-top: 20px;
+        }
+        
+        /* SEO Content Section */
+        .seo-content {
+            margin-top: 80px; /* More separation */
+            text-align: left;
+            border-top: 1px solid var(--border-color); /* Subtle separator */
+            padding-top: 50px;
+        }
+        .seo-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px; /* Larger H2 */
+            color: var(--accent-blue);
+            margin-bottom: 25px;
+            text-align: center;
+            /* Removed filter: drop-shadow for H2 */
+        }
+        .seo-content p {
+            font-size: 18px; /* Larger body text */
+            color: #c0c0c0; /* Lighter text for readability on dark background */
+            margin-bottom: 20px;
+        }
+        .seo-content p strong {
+            color: var(--accent-blue); /* Highlight keywords */
+        }
+        .seo-content code {
+            background-color: rgba(0, 188, 212, 0.1); /* Subtle code background */
+            color: var(--accent-blue);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto; /* Pushes footer to the bottom */
+            padding: 30px 20px;
+            color: #8899aa;
+            font-size: 14px;
+            background-color: #10101c; /* Slightly darker than main background */
+            width: 100%;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: var(--gradient-end);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; border-radius: 15px; }
+            .logo { font-size: 36px; }
+            h1 { font-size: 42px; }
+            p.subtitle { font-size: 19px; margin-bottom: 40px; }
+            .waitlist-form { flex-direction: column; box-shadow: none; max-width: 100%; border: none; }
+            .waitlist-form input[type="email"] { border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 10px; padding: 15px 20px; font-size: 17px; }
+            .waitlist-form button { border-radius: 10px; width: 100%; padding: 15px 20px; font-size: 17px; }
+            .seo-content h2 { font-size: 26px; }
+            .seo-content p { font-size: 17px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 20px; }
+            h1 { font-size: 34px; }
+            p.subtitle { font-size: 17px; }
+            .logo { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="logo">AIDetector<span>.plus</span></div>
+
+        <h1>The Next-Generation AI Detector is Launching Soon.</h1>
+        <p class="subtitle">
+            Tired of guessing? Our tool offers <strong>90%+ confidence</strong> in detecting AI-generated content. Be the first to know when we go live and gain exclusive early access to advanced features.
+        </p>
+
+        <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true">
+            <input type="email" name="email" placeholder="Enter your email to join the waitlist & get updates" required>
+            <button type="submit">Get Early Access</button>
+        </form>
+        <p class="form-privacy">Join 100+ educators & SEOs already on the waitlist. We respect your privacy — no spam, ever.</p>
+        
+        <div class="seo-content">
+            <h2>Unveiling What We're Building at AIDetector.plus</h2>
+            <p>
+                The digital landscape is rapidly evolving, with the distinction between human-authored and AI-generated text becoming increasingly subtle. That's precisely why we are meticulously developing an exceptionally powerful and completely free <strong>AI detector</strong> for a diverse global audience. More than just another generic <strong>GPT detector</strong>, our platform is being engineered with an advanced, custom-trained model designed to deliver unparalleled reliability.
+            </p>
+            <p>
+                Our core focus is to be the ultimate <strong>AI essay detector</strong> for discerning teachers, professors, and academic institutions, ensuring the integrity of student submissions. Concurrently, we are optimizing it to be the most precise <strong>AI writing detector</strong> for SEO professionals, content marketers, and digital agencies, helping them uphold content quality and align with critical guidelines like Google's "Helpful Content" update.
+            </p>
+            <p>
+                At <code>aidetector.plus</code>, our mission is to empower you with unwavering confidence in content authenticity. Whether you're a student verifying your work, an educator safeguarding academic standards, or a publisher protecting your brand's authority, our forthcoming tool will be your indispensable solution. Sign up now to receive timely notifications and secure your opportunity for exclusive early-bird access to our cutting-edge platform. The era of uncertainty in AI content detection is about to end.
+            </p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        &copy; 2023 AIDetector.plus. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AIDetector.plus - AI Detector",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web",
+      "description": "The most accurate, free AI Detector for educators, students, and SEO professionals. Detects GPT-4, AI essays, and marketing content with high precision. Launching Soon.",
+      "url": "https://aidetector.plus/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "releaseNotes": "Currently in pre-launch. Sign up for the waitlist to get early access to our advanced AI detection platform.",
+      "softwareRequirements": "Modern web browser"
+    }
+    </script>
+
+</body>
+</html>
